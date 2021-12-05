@@ -67,7 +67,7 @@ function Header() {
           <ViewGridIcon className="icon" />
           <ChatIcon className="icon" />
           <BellIcon className="icon" />
-          <ChevronDownIcon className="icon" />
+          <ChevronDownIcon onClick={signOut} className="icon" />
         </div>
       </div>
     </div>
