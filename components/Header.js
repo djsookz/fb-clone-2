@@ -36,7 +36,7 @@ function Header() {
       </div>
       {/* Middle */}
       <div className="hidden sm:inline-flex  justify-center flex-grow ">
-        <div className="flex space-x-6 md:space-x-2">
+        <div className="relative flex space-x-6 md:space-x-2 ">
           <HeaderIcon active Icon={HomeIcon} />
           <HeaderIcon Icon={FlagIcon} />
           <HeaderIcon Icon={PlayIcon} />
