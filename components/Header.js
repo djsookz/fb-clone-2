@@ -15,20 +15,16 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
 import HeaderIcon from "./HeaderIcon";
-import { session, signOut, useSession } from "next-auth/client";
+import { signOut, useSession } from "next-auth/client";
 
 function Header() {
   const [session] = useSession();
 
   return (
     <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md justify-between">
+      {/* Left */}
       <div className="flex items-center">
-        <Image
-          src="https://links.papareact.com/5me"
-          width={40}
-          height={40}
-          layout="fixed"
-        />
+        <Image src="/fb_logo.png" width={40} height={40} layout="fixed" />
         <div className="flex ml-2 items-center rounded-full bg-gray-100 p-2">
           <SearchIcon className="h-6 text-gray-600" />
           <input
@@ -38,6 +34,7 @@ function Header() {
           />
         </div>
       </div>
+      {/* Middle */}
       <div className="hidden sm:inline-flex  justify-center flex-grow ">
         <div className="flex space-x-6 md:space-x-2">
           <HeaderIcon active Icon={HomeIcon} />
@@ -47,7 +44,7 @@ function Header() {
           <HeaderIcon Icon={UserGroupIcon} />
         </div>
       </div>
-
+      {/* Right */}
       <div className="flex items-center sm:space-x-2  ">
         <div className="hidden xl:flex  items-center space-x-2">
           <Image
