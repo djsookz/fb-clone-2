@@ -1,4 +1,9 @@
 import Image from "next/image";
+import OndemandVideoIcon from "@material-ui/icons/OndemandVideo";
+import StorefrontIcon from "@material-ui/icons/Storefront";
+import SupervisedUserCircleOutlinedIcon from "@material-ui/icons/SupervisedUserCircleOutlined";
+import DashboardOutlinedIcon from "@material-ui/icons/DashboardOutlined";
+
 import {
   BeakerIcon,
   BellIcon,
@@ -21,10 +26,16 @@ function Header() {
   const [session] = useSession();
 
   return (
-    <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md justify-between">
+    <div className="sticky top-0 z-50 bg-white flex items-center p-[1px] lg:px-5 shadow-md justify-between">
       {/* Left */}
       <div className="flex items-center">
-        <Image src="/fb_logo.png" width={40} height={40} layout="fixed" />
+        <Image
+          src="/fb_logo.png"
+          width={40}
+          height={40}
+          layout="fixed"
+          className="cursor-pointer"
+        />
         <div className="flex ml-2 items-center rounded-full bg-gray-100 p-2">
           <SearchIcon className="h-6 text-gray-600" />
           <input
@@ -51,8 +62,8 @@ function Header() {
             onClick={signOut}
             className="rounded-full cursor-pointer"
             src={session.user.image}
-            width={40}
-            height={40}
+            width={30}
+            height={30}
             layout="fixed"
           />
           <p className="whitespace-nowrap font-semibold pr-3">

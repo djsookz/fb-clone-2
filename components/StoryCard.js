@@ -2,8 +2,9 @@ import Image from "next/image";
 
 function StoryCard({ name, src, profile }) {
   return (
-    <div className="relative  h-36 w-18 md:h-32 md:w-18 lg:h-56 lg:w-26 cursor-pointer overflow-x-hidden p-3 transition-all duration-400 transform ease-in hover:scale-105 hover:animate-pulse">
+    <div className="relative shadow-xl h-36 w-18 md:h-[130px] md:w-[110px] lg:h-52 lg:w-[100px] cursor-pointer overflow-x-hidden p-3 transition-all duration-400 transform ease-in hover:scale-105 hover:animate-pulse">
       <span className="absolute opacity-0 lg:opacity-100 border-4 h-10 w-10 border-solid border-blue-500 rounded-full  z-50"></span>
+
       <Image
         className="absolute opacity-0 lg:opacity-100  rounded-full  z-40 top-10 "
         src={profile}
@@ -17,6 +18,9 @@ function StoryCard({ name, src, profile }) {
         src={src}
         layout="fill"
       />
+      <p className="hidden lg:inline-block absolute  w-12 bottom-2 right-10  text-white text-sm ">
+        {name}
+      </p>
     </div>
   );
 }

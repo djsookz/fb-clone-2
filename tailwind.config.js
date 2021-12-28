@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        6: "repeat(auto-fill,9rem)",
+        6: "repeat(auto-fill,7rem)",
       },
     },
   },
