@@ -6,7 +6,7 @@ function StoryPics() {
   const [session] = useSession();
   return (
     <div className="ml-2">
-      <div className="relative shadow-xl rounded-2xl h-[145px] w-18 md:h-[130px] md:w-[110px] lg:h-52 lg:w-[100px] cursor-pointer overflow-x-hidden p-3 transition-all duration-400 transform ease-in hover:scale-105 hover:animate-pulse">
+      <div className="relative  rounded-2xl h-[145px] w-18 md:h-[130px] md:w-[110px] lg:h-52 lg:w-[100px] cursor-pointer overflow-x-hidden p-3 transition-all duration-400 transform ease-in hover:scale-105 hover:animate-pulse">
         <span className="absolute opacity-0 lg:opacity-100 border-4 h-10 w-10 border-solid border-blue-500 rounded-full  z-50"></span>
         <Image
           className="absolute opacity-0 lg:opacity-100  rounded-full  z-40 top-10 "
